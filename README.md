@@ -1,59 +1,67 @@
-# Atelier7Frontend
+# Atelier 7 Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+## Introduction
 
-## Development server
+ Cet atelier a pour objectif de développer une application Full-Stack permettant de gérer des employés (CRUD) avec une API sécurisée et un frontend moderne. La partie frontend, développée avec Angular, se concentre sur la création d'une interface utilisateur intuitive et réactive, tout en intégrant des fonctionnalités avancées telles que l'authentification et la gestion des employés.
 
-To start a local development server, run:
+Ce dépôt est exclusivement dédié à la partie frontend. La partie backend, développée avec Spring Boot, est disponible dans un dépôt séparé : [Atelier 7 Backend](https://github.com/ahyahya1616/atelier7_employee).
 
-```bash
-ng serve
-```
+## Structure du Projet
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Le projet est organisé comme suit :
 
-## Code scaffolding
+- `src/` : Contient le code source de l'application.
+  - `app/` : Dossier principal de l'application.
+    - `components/` : Contient des composants réutilisables tels que `employee-list` et `login`.
+    - `guards/` : Inclut les gardes de route comme `auth.guard.ts`.
+    - `interceptors/` : Contient les intercepteurs HTTP comme `auth.interceptor.ts`.
+    - `models/` : Définit les modèles de données tels que `auth.model.ts` et `employee.model.ts`.
+    - `services/` : Fournit des services pour l'authentification et la gestion des employés.
+  - `index.html` : Le fichier HTML principal.
+  - `main.ts` : Le point d'entrée de l'application.
+  - `styles.css` : Styles globaux pour l'application.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Le frontend communique avec le backend via des API REST pour effectuer des opérations telles que l'authentification, la gestion des employés, et bien plus encore.
 
-```bash
-ng generate --help
-```
+### Fonctionnalités Principales
 
-## Building
+1. **Authentification** :
+   - Gestion des connexions et déconnexions des utilisateurs.
+   - Protection des routes grâce à des gardes d'authentification.
 
-To build the project run:
+2. **Gestion des Employés** :
+   - Ajout, modification et suppression des employés.
+   - Affichage de la liste des employés avec des détails.
 
-```bash
-ng build
-```
+3. **Intercepteurs HTTP** :
+   - Gestion des jetons d'authentification pour sécuriser les requêtes API.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Captures d'Écran
 
-## Running unit tests
+Voici quelques captures d'écran de l'application :
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Page d'Ajout d'Employé1
+![Ajout Employé](images/addEmployee.png)
 
-```bash
-ng test
-```
+### Page de Liste des Employés
+![Liste des Employés](images/listEmployee.png)
 
-## Running end-to-end tests
+### Page de Connexion
+![Connexion](images/login.png)
 
-For end-to-end (e2e) testing, run:
+### Page de Modification d'Employé
+![Modification Employé](images/modifyEmployee.png)
 
-```bash
-ng e2e
-```
+## Instructions pour Exécuter le Projet
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+1. Clonez le dépôt.
+2. Installez les dépendances avec `npm install`.
+3. Lancez le serveur de développement avec `ng serve`.
+4. Ouvrez l'application dans votre navigateur à l'adresse `http://localhost:4200`.
 
-## Additional Resources
+## Conclusion
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+La partie frontend du projet  met en œuvre les meilleures pratiques de développement Angular pour offrir une expérience utilisateur fluide et sécurisée. Grâce à l'intégration avec le backend Spring Boot, cette application Full-Stack permet une gestion efficace des employés.
+
