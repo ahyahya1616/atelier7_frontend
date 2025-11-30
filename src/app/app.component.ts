@@ -3,10 +3,14 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: '<router-outlet></router-outlet>',
+  styles: [`
+    :host {
+      display: block;
+      min-height: 100vh;
+    }
+  `]
 })
-export class AppComponent {
-  title = 'atelier7_frontend';
-}
+export class AppComponent {}
